@@ -66,11 +66,11 @@ def tryLocalCSV():
 
 def readfromCSV(acconym):
     import csv
-    f1 = file('testdata.csv', 'r')
+    f1 = file('softwarecsv.csv', 'r')
     c1 = csv.reader(f1)
     #csv = ""
     for hosts_row in c1:
-        if hosts_row[0] == acconym.upper():
+        if hosts_row[0].upper() == acconym.upper():
             f1.close()
             return hosts_row[1]
             break
