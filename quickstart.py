@@ -83,12 +83,12 @@ def getRemoteAcronyms(acronym):
     else:
         for row in values:
             print(row[0])
-            if row[0].upper() == justAcronym.upper():
+            if row[0].upper() == justAcronym.upper() and len(row) > 1:
                 return row[1]
                 break
             # Print columns A and E, which correspond to indices 0 and 4.
         #    print('%s' % (row[0]))
-    return "couldnt find that acronym"
+    return None
 
 if __name__ == '__main__':
     main()

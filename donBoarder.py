@@ -55,7 +55,14 @@ def readFromGoogleSheets(acconym):
     
     from quickstart import getRemoteAcronyms
     aMeaning = getRemoteAcronyms(acconym)
-    return aMeaning
+    if aMeaning is not None:
+        return aMeaning
+    else:
+        return tryLocalCSV()
+
+def tryLocalCSV():
+    return "trying local csv now"
+    print("trying local csv now")
 
 def readfromCSV(acconym):
     import csv
