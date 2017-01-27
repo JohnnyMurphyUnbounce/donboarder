@@ -1454,8 +1454,207 @@ VPN,Virtual Private Network
 VRU,Voice Response Unit
 WAN,Wide Area Network
 WFM,Workforce Management
-WFO,Workforce Optimization"
-lll",llkndsfn
+WFO,Workforce Optimization
+WFH,Working from home
+OOO,Out Of the Office
+mp,my pleasure
+CSM,Customer Success Manager
+mp,My Pleasure
+VOC,Voice of the Customer
+np,no problem
+wtf,I'm not sure what you mean
+afaict,as far as I can tell
+Q1,April-July
+Q2,July-November
+Q3,November-January
+Q4,January-April
+tbh,to be honest
+imo,in my opinion
+icymi,in case you missed it
+CRO,Conversion Rate Optimization
+tldr,too long didnt read
+PPC,Pay per click
+CPC,Cost per click
+imho,in my humble opinion
+OKR,Objective and Key Results
+BRD,Business Requirements Document
+wrt,With Respect To
+brt,Be right there
+CS,Customer Success
+smh,[I] shake my head
+MRR,Monthly Recurring Revenue
+PM,Product Manager
+PO,Product Owner
+GTM,Google Tag Manager or Go-To-Market
+GA,Google Analytics or General Availability
+DTR,Dynamic Text Replacement
+ARPU,Average Revenue Per User
+ARR,Annual Recurring Revenue
+SaaS,Software-As-A-Service
+CAC,Customer Acquistion Cost
+LTV,Life Time Value
+subs,Subscriptions
+Gif,Jiffy Peanut Butter
+SQL,Sequential Query Language or Sales Qualified Lead
+WIP,Work in Progress
+aws,Amazon Web Services
+ec2,[AWS] Elastic Compute Cloud
+sns,[AWS] Simple Notification Service
+SQS,[AWS] Simple Queue Service
+np,No Problem
+S3,[AWS] Simple Storage Service
+MLP,Minimum Loveable Product
+MVP,Minimum Viable Product
+AA,Active Admin
+ZD,Zendesk
+LP,Landing Page
+B2B,Business to Business
+ses,[AWS] Simple Email Service
+sqs,[AWS] Simple Queue Service
+rds,[AWS] Relational Database Service
+ebs,[AWS] Elastic Block Store
+vpc,[AWS] Virtual Private Cloud
+ecs,[AWS] Elastic Container Service
+elb,[AWS] Elastic Load Balancer
+efs,[AWS] Elastic File System
+hsm,Hardware Security Module
+kms,[AWS] Key Management Service
+emr,[AWS] Elastic Map Reduce
+CASL,Canadian Anti-Spam Legislation
+DTR,Dynamic Text Replacement
+CTA,Call To Action
+idk,I dont know
+FCD,Form Confirmation Dialog
+Lightbox,A modal window that opens over a page, filling the screen and dimming what&rsquo;s behind to prominently display content requested by the user.
+ddd,Domain Driven Design
+rn,right now
+org,Organization
+NPS,Net Promotor Score
+POM,Page Object Model
+TOFU,Top of Funnel Content
+NSAMCWADLP,Never Start A Marketing Campaign Without A Dedicated Landing Page
+Hubspot,Corey is the smartest person in Marketing
+MOFU,Middle of Funnel Content
+BOFU,Bottom of Funnel Content
+hdd,Hypothesis Driven Development
+Scrum,https://en.wikipedia.org/wiki/Scrum_(software_development)
+Lean,https://en.wikipedia.org/wiki/Lean_manufacturing
+Agile,https://en.wikipedia.org/wiki/Agile_software_development
+Kanban,https://en.wikipedia.org/wiki/Kanban_(development)
+DOM,Domain Object Model
+SME,Subject Matter Expert
+Webapp,Unbounce Web Application or A-Team
+KPI,Key Performance Indicator
+UX,User Experience
+UI,User Interface
+API,Application Program Interface
+SDK,Software Development Kit
+Mock,Mock-ups
+UAT,User Acceptance Test
+A/B, A/B Testing - Split Testing - Multivariat Testing
+Alpha,Alpha Testing
+Beta,Beta Testing
+USP,Unique Selling Propostion
+UVP,Unique Value Proposition
+CRUD,Create, Read, Update, Delete actions
+db,Database
+ERD,Entity Relationship Diagram
+UML,Unified Modeling Language
+HTML,HyperText Markup Language
+EM,Engineering Manager
+EL,Engineering Leadership,POM	Page , A/B bject,
+POM,Page Object Model
 ddd,kjfdsn
 gggg,dskjhfdsjfd
 lmfao,laughing my f$*king ass off
+24/7,24 Hours a Day, 7 Days a Week
+AA,Alcoholics Anonymous
+ABC,Already Been Chewed
+AC,Air Conditioning
+AD,Anno Domini ("In the Year of Our Lord")
+AKA,Also Known As
+AM,Ante Meridiem
+ASAP,As Soon As Possible
+ATM,Automated Teller Machine
+B&B,Bed and Breakfast
+BC,Before Christ or Because
+BCE,Before the Common Era
+BLT,Bacon, Lettuce, Tomato
+BM,Bowel Movement
+BYOB,Bring Your Own Beer
+CC,Credit Card
+COP,Constable On Patrol
+CST,Central Standard Time
+CSV,Comma Separated Value
+CYA,Cover Your Ass
+D&D,Dungeons and Dragons (a game created by TSR)
+EOD,End Of Day
+EST,Eastern Standard Time
+ET,Extra Terrestrial
+ETR,Early to Rise
+FDR,Franklin Delano Roosevelt
+FEAR,False Evidence that Appears Real
+FYI,For Your Information
+GC,General Contractor or Gift Certificate
+GM,General Manager
+GMO,Genetically Modified (usually as in "Non-GMO")
+HAZ-MAT,Hazardous Material
+ID,Identification
+IQ,Intelligence Quotient
+ISBN,International Standard Book Number
+JFK,John Fitzgerald Kennedy
+MC,Master of Ceremonies
+MLK,Martin Luther King, Jr.
+MO,Modus Operandi
+MS,Manuscript
+MST,Mountain Standard Time
+MTG,Magic: The Gathering
+MTD,Month To Date
+NIB,New In the Box
+NIH,Not Invented Here
+NIMBY,Not In My Backyard
+OJ,Orange Juice
+PBJ,Peanut Butter and Jelly
+PC,Politically Correct
+PDA,Public Display of Affection
+PHAT,Pretty Hot And Tempting
+PI,Private Investigator
+PIN,Personal Identification Number
+PM,Post Meridiem
+PMB,Personal Mail Box
+PMS,Premenstrual Syndrome
+POA,Power Of Attorney
+POSH,Port Out, Starboard Home
+PPS,Post Post Script
+PR,Public Relations
+PS,Post Script
+PSI,Pounds Per Square Inch
+PST,Pacific Standard Time
+PTO,Paid Time Off
+Q&A,Question and Answer
+R&R,Rest and Relaxation
+RBG,Red, Blue, Green
+RIP,Rest in Peace
+ROYGBIV,Red, Orange, Yellow, Green, Blue, Indigo, Violet
+RPG,Role Playing Game
+RSVP,Répondez S'il Vous Plaît (French for "Please reply")
+SOB,Son of a B*tch
+SOL,Sh*t Out of Luck
+SOP,Standard Operating Procedure
+SOS,Save Our Souls
+SPF,Sun Protection Factor (how sunscreen lotion is rated)
+STET,Let it Stand (an editor's mark)
+TBA,To Be Announced
+TBD,To Be Determined
+TEAM,Together Everyone Achieves More
+TGIF,Thank God It's Friday
+TIA,Thanks In Advance
+TIP,To Insure Promptness
+TLC,Tender Loving Care
+UFO,Unidentified Flying Object
+UPC,Universal Product Code
+VIP,Very Important Person
+WASP,White Anglo Saxon Protestant
+WOM,Word of Mouth
+WTB,Want To Buy
+YTD,Year To Date

@@ -25,14 +25,19 @@ def handle_command(command, channel):
         returns back what it needs for clarification.
     """
     print(command)
-    response = "Not sure what you mean. Use the *" + EXAMPLE_COMMAND + \
-               "* command with numbers, delimited by spaces."
+
+    AcAndMeaning = command.split(' ', 1)[1]
+    justAcronym = AcAndMeaning.split(' ', 1)[0]
+
+    response = "*Oh! Looks like you need a bitta help with that fancy Acronym, Let me see what I got*"
     if command.startswith(EXAMPLE_COMMAND):
         response = "Yes Burns is very neat"
     elif command.startswith(CSV_COMMAND):
         response = readfromCSV(command.rsplit(None, 1)[-1])
     elif command.startswith(GOOGLE_COMMAND):
-        response = readFromGoogleSheets(command)
+        slack_client.api_call("chat.postMessage", channel=channel,
+                          text=response, as_user=True)
+        response = "I'm pretty sure *"+justAcronym+"* means :```"+readFromGoogleSheets(command)+"```"
     elif command.startswith(INSERT_COMMAND):
         response = insertIntoLocal(command)
     slack_client.api_call("chat.postMessage", channel=channel,
