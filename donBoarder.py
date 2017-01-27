@@ -1,5 +1,6 @@
 import os
 import time
+import csv
 from slackclient import SlackClient
 
 
@@ -11,6 +12,7 @@ AT_BOT = "<@" + BOT_ID + ">"
 EXAMPLE_COMMAND = "isneat"
 CSV_COMMAND = "meaning"
 GOOGLE_COMMAND = "sheets"
+INSERT_COMMAND = "insert"
 
 # instantiate Slack & Twilio clients
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
@@ -31,6 +33,8 @@ def handle_command(command, channel):
         response = readfromCSV(command.rsplit(None, 1)[-1])
     elif command.startswith(GOOGLE_COMMAND):
         response = readFromGoogleSheets(command)
+    elif command.startswith(INSERT_COMMAND):
+        response = insertIntoLocal(command)
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
 
@@ -60,6 +64,17 @@ def readFromGoogleSheets(acconym):
     else:
         return readfromCSV(acconym.rsplit(None, 1)[-1])
 
+def insertIntoLocal(acronym):
+    AcAndMeaning = acronym.split(' ', 1)[1]
+    justAcronym = AcAndMeaning.split(' ', 1)[0]
+    meaning = AcAndMeaning.split(' ', 1)[1]
+
+    print("acc: " + AcAndMeaning.split(' ', 1)[0])
+    print("meaning: " + AcAndMeaning.split(' ', 1)[1])
+
+    write_data("softwarecsv.csv", justAcronym, meaning)
+    return("done!")
+
 def tryLocalCSV():
     return "trying local csv now"
     print("trying local csv now")
@@ -76,8 +91,16 @@ def readfromCSV(acconym):
             break
 
     return "could find that acronym anywhere!"
-        
-            #return "Woops dont have that one"
+
+def write_data(file, acronym, meaning):
+    print "writing data"
+    ofile = open(file, "a")
+
+    writer = csv.writer(ofile, delimiter=",")
+
+    writer.writerow([acronym] + [meaning]);
+
+    ofile.close()
 
 if __name__ == "__main__":
     READ_WEBSOCKET_DELAY = 1 # 1 second delay between reading from firehose
