@@ -58,7 +58,7 @@ def readFromGoogleSheets(acconym):
     if aMeaning is not None:
         return aMeaning
     else:
-        return tryLocalCSV()
+        return readfromCSV(acconym.rsplit(None, 1)[-1])
 
 def tryLocalCSV():
     return "trying local csv now"
@@ -74,6 +74,8 @@ def readfromCSV(acconym):
             f1.close()
             return hosts_row[1]
             break
+
+    return "could find that acronym anywhere!"
         
             #return "Woops dont have that one"
 
