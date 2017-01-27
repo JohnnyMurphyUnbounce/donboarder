@@ -10,6 +10,7 @@ BOT_ID = os.environ.get("BOT_ID")
 AT_BOT = "<@" + BOT_ID + ">"
 EXAMPLE_COMMAND = "isneat"
 CSV_COMMAND = "meaning"
+GOOGLE_COMMAND = "sheets"
 
 # instantiate Slack & Twilio clients
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
@@ -28,6 +29,8 @@ def handle_command(command, channel):
         response = "Yes Burns is very neat"
     elif command.startswith(CSV_COMMAND):
         response = readfromCSV(command.rsplit(None, 1)[-1])
+    elif command.startswith(GOOGLE_COMMAND):
+        response = readFromGoogleSheets(command)
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
 
@@ -47,6 +50,12 @@ def parse_slack_output(slack_rtm_output):
                 return output['text'].split(AT_BOT)[1].strip().lower(), \
                        output['channel']
     return None, None
+
+def readFromGoogleSheets(acconym):
+    
+    from quickstart import getRemoteAcronyms
+    aMeaning = getRemoteAcronyms(acconym)
+    return aMeaning
 
 def readfromCSV(acconym):
     import csv
