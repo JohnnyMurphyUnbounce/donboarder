@@ -9,6 +9,7 @@ BOT_ID = os.environ.get("BOT_ID")
 # constants
 AT_BOT = "<@" + BOT_ID + ">"
 EXAMPLE_COMMAND = "isneat"
+CSV_COMMAND = "meaning"
 
 # instantiate Slack & Twilio clients
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
@@ -24,9 +25,12 @@ def handle_command(command, channel):
     response = "Not sure what you mean. Use the *" + EXAMPLE_COMMAND + \
                "* command with numbers, delimited by spaces."
     if command.startswith(EXAMPLE_COMMAND):
-        response = "Yes johnny is very neat"
+        response = "Yes Burns is very neat"
+    elif command.startswith(CSV_COMMAND):
+        response = readfromCSV(command.rsplit(None, 1)[-1])
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
+
 
 
 def parse_slack_output(slack_rtm_output):
@@ -44,6 +48,18 @@ def parse_slack_output(slack_rtm_output):
                        output['channel']
     return None, None
 
+def readfromCSV(acconym):
+    import csv
+    f1 = file('testdata.csv', 'r')
+    c1 = csv.reader(f1)
+    #csv = ""
+    for hosts_row in c1:
+        if hosts_row[0] == acconym.upper():
+            f1.close()
+            return hosts_row[1]
+            break
+        
+            #return "Woops dont have that one"
 
 if __name__ == "__main__":
     READ_WEBSOCKET_DELAY = 1 # 1 second delay between reading from firehose
