@@ -61,7 +61,7 @@ def parse_slack_output(slack_rtm_output):
     return None, None
 
 def readFromGoogleSheets(acconym):
-    
+
     from quickstart import getRemoteAcronyms
     aMeaning = getRemoteAcronyms(acconym)
     if aMeaning is not None:
@@ -106,6 +106,9 @@ def write_data(file, acronym, meaning):
     writer.writerow([acronym] + [meaning]);
 
     ofile.close()
+
+def lambda_handler(event, context):
+    return (event)
 
 if __name__ == "__main__":
     READ_WEBSOCKET_DELAY = 1 # 1 second delay between reading from firehose
